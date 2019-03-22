@@ -10,6 +10,7 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.asksira.webviewsuite.WebViewSuite;
 
@@ -60,14 +61,15 @@ public class MainActivity extends AppCompatActivity {
        // webView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
 
 
-
+        Toast.makeText(this, "Loading", Toast.LENGTH_SHORT).show();
 
         new JsonParsingAsynTask(serviceDataUrl).execute();
     }
 
 
 
-    private class JsonParsingAsynTask extends AsyncTask<Void, Void, Void> {
+    private class JsonParsingAsynTask extends AsyncTask<Void, Void, Void
+            > {
         ProgressDialog progressDialog;
         String url;
 
