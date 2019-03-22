@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
        // webView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
 
 
-        Toast.makeText(this, "Loading", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Loading Failed", Toast.LENGTH_SHORT).show();
 
         new JsonParsingAsynTask(serviceDataUrl).execute();
     }
